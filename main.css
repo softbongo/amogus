@@ -1,0 +1,141 @@
+html, body {
+    display: flex;
+    flex-direction: column;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12pt;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+main {
+    flex-grow: 1;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    animation: blood 3s ease-in-out infinite;
+}
+.img-wrapper {
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img-wrapper > .image {
+    background-color: white;
+    box-shadow: 0px 0px 50px 50px white;
+    animation: coin_noodle 0.9s ease-in-out infinite;
+    display: flex;
+}
+.image > img {
+    width: 100%;
+}
+#cover {
+    background-color: black;
+    z-index: 99;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+#cover > h1 {
+    font-size: 2em;
+    color: white;
+    animation: coin_noodle 7s ease-in-out infinite;
+
+}
+#cover > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+#no-button,
+#yes-button {
+    color: white;
+    background-color: grey;
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+}
+#no-button:hover {
+  background-color: red;
+}
+#no-button:hover {
+    padding: 10px;
+    font-size: 2em;
+}
+#yes-button:hover {
+    padding: 10px;
+    font-size: 2em;
+}
+#yes-button:hover {
+    background-color: green;
+}
+#audio {
+    position: absolute;
+    pointer-events: none;
+}
+
+#SECRET {
+    display: none;
+}
+.fade {
+    animation: fade 200ms linear;
+}
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes coin_noodle {
+    0%{
+        transform:scale(1);
+    }
+    25%{
+        transform: scale(1.5) rotate(10deg);
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.5) rotate(-10deg);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes blood {
+    0%{
+        background-color: black;
+    }
+
+    25% {
+        background-color: rgb(27, 171, 214);
+    }
+
+    50% {
+        background-color: black;
+    }
+
+    75%{
+        background-color: rgb(226, 119, 19);
+    }
+
+    100% {
+        background-color: black;
+    }
+}
